@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#50323232"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <com.example.administrator.myapplication.funnelView
+            android:id="@+id/dropView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+        </com.example.administrator.myapplication.funnelView>
+
+
+        <TextView
+            android:id="@+id/limit_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="贷款区间(元)"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/firstLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/limit_area"
+            android:layout_alignLeft="@+id/limit_area"
+            android:orientation="horizontal">
+
+            <com.example.administrator.myapplication.NiceSpinner
+                android:paddingLeft="10dp"
+                android:id="@+id/lowest_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="最低金额"
+                android:spinnerMode="dropdown"/>
+
+
+            <TextView
+                android:gravity="center_vertical|center"
+                android:id="@+id/ALine"
+                android:layout_width="10dp"
+                android:layout_height="5dp"
+                android:layout_alignBaseline="@+id/lowest_limit"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/lowest_limit"
+                android:text="ㅡ" />
+
+            <com.example.administrator.myapplication.NiceSpinner
+                android:id="@+id/highest_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ALine"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/ALine"
+                android:hint="最高金额" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/limit_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstLine"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:text="贷款区间(元)"
+                android:textSize="15sp" />
+
+
+
+        </LinearLayout>
+
+        <com.example.administrator.myapplication.NiceSpinner
+            android:id="@+id/loan_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/limit_deadline"
+            android:layout_marginTop="5dp"
+            android:hint="期限选择" />
+
+        <ImageView
+            android:id="@+id/drop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dropView"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_filter_sure_3x" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
